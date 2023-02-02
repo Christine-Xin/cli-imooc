@@ -1,6 +1,8 @@
 const log=require('npmlog')
+const isDebug=require('./isDebug')
 // 当是调试模式时，log等级改为调式；其他状态为Info
-if(process.argv.includes('--debug') || process.argv.includes('-d')){
+// if(process.argv.includes('--debug') || process.argv.includes('-d')){
+if(isDebug()){
     log.level='verbose'
 }else{
     log.level='info'
