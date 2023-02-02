@@ -34,5 +34,15 @@ export default function createCLI(){
      //     .action(()=>{
      //         console.log('init...')
      //     });
+    //  监听未知命令
+     program.on('command:*',function(obj){
+        log.error('未知命令：'+obj[0])
+     })
+    //  监听是否是debug模式
+    program.on('option:debug',function(){
+        if(program.opts().debug){
+            log.verbose('debug','launch debug mode')
+        }
+    })
      return program
 }
