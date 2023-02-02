@@ -1,0 +1,29 @@
+{
+  "name": "@imooc.com/init",
+  "version": "0.0.0",
+  "description": "init command",
+  "author": "xin.zhao <xin.zhao@datacvg.com>",
+  "homepage": "https://github.com/Christine-Xin/cli-imooc#readme",
+  "license": "ISC",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Christine-Xin/cli-imooc.git"
+  },
+  "scripts": {
+    "test": "node ./__tests__/init.test.js"
+  },
+  "bugs": {
+    "url": "https://github.com/Christine-Xin/cli-imooc/issues"
+  },
+  "dependencies": {
+    "@imooc.com/command": "^0.0.0"
+  }
+}

@@ -1,0 +1,13 @@
+0 silly argv {
+0 silly argv   _: [ 'add' ],
+0 silly argv   scope: '=',
+0 silly argv   globs: [ 'packages/init' ],
+0 silly argv   lernaVersion: '6.4.1',
+0 silly argv   '$0': 'C:\\Users\\17486\\AppData\\Roaming\\npm\\node_modules\\lerna\\cli.js',
+0 silly argv   pkg: 'packages/command'
+0 silly argv }
+1 notice cli v6.4.1
+2 verbose rootPath C:\Users\17486\Desktop\赵鑫资料\项目\脚手架\cli-imooc
+3 error Error: An unknown git error occurred
+3 error     at makeError (C:\Users\17486\Desktop\赵鑫资料\项目\脚手架\cli-imooc\node_modules\@npmcli\git\lib\make-error.js:28:13)
+3 error     at C:\Users\17486\Desktop\赵鑫资料\项目\脚手架\cli-imooc\node_modules\@npmcli\git\lib\spawn.js:37:26
