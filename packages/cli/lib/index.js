@@ -1,11 +1,13 @@
-const commander=require('commander')
-const createInitCommand=require('@imooc.com/init')
-const {log,isDebug}=require('@imooc.com/utils')
-const semver=require('semver')
-const chalk=require('chalk')
+import {program} from 'commander'
+import createInitCommand from '@imooc.com/init'
+import {log,isDebug} from '@imooc.com/utils'
+import semver from 'semver'
+import chalk from 'chalk'
+// import pkg from '../package.json'
 
-const {program}= commander
-const pkg = require('../package.json')
+let pkg=global.loadJSON("../package.json",import.meta.url);
+
+
 const LOWEST_NODE_VERSION='14.0.0';
 
 function checkNodeVersion(){
@@ -27,7 +29,7 @@ process.on('uncaughtException',(e)=>{
     }
     
 })
-module.exports=function(args){
+export default function(args){
     // console.log(args)
     log.success('version',pkg.version)
     // 注册脚手架

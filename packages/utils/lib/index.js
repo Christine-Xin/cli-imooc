@@ -1,8 +1,13 @@
-const log= require('./log')
+import log from'./log.js'
 
-const isDebug= require('./isDebug')
+import isDebug from'./isDebug.js'
+// import "./expandGlobal.js";
 
-module.exports={
+
+import * as expandGlobal from "./expandGlobal.js";
+
+export {
     log,
     isDebug,
+    expandGlobal,
 }

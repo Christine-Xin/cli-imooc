@@ -24,6 +24,8 @@
     "url": "https://github.com/Christine-Xin/cli-imooc/issues"
   },
   "dependencies": {
+    "dirname-filename-esm": "^1.1.1",
     "npmlog": "^7.0.1"
-  }
+  },
+  "type": "module"
 }

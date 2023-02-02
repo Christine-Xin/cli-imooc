@@ -1,7 +1,7 @@
 'use strict';
 // 命令初始化
-const Command= require('@imooc.com/command')
-const {log}=require('@imooc.com/utils')
+import Command from '@imooc.com/command'
+import {log} from '@imooc.com/utils'
 class InitCommand extends Command{
     get command(){
         return 'init [name]'
@@ -30,4 +30,4 @@ function Init(instance){
     return new InitCommand(instance);
 }
 // 返回initcommand实例
-module.exports=Init;
+export default Init;

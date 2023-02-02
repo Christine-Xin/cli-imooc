@@ -1,7 +1,9 @@
 #! /usr/bin/env node
 
-const importLocal = require('import-local')
-const entry = require('../lib/index')
+import importLocal from 'import-local'
+import entry from '../lib/index.js'
+// import { expandGlobal } from '@imooc.com/utils'
+const __filename=global.getFileName(import.meta.url)
 if(importLocal(__filename)){
     log.info('cli','使用本地 cli-imooc 版本')
 }else{
