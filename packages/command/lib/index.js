@@ -14,9 +14,9 @@ class Command{
             })
         }
         
-        cmd.action((name,opts)=>{
-                console.log('init...',name,opts)
-        });
+        cmd.action((...params)=>{
+            this.action(params)
+        })
     }
     get command(){
         throw new Error('command must be implements');
@@ -26,6 +26,9 @@ class Command{
     }
     get options(){
         return []
+    }
+    get action(){
+        throw new Error('action must be implements');
     }
 }
 

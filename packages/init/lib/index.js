@@ -13,6 +13,9 @@ class InitCommand extends Command{
             ['-f, --force','是否强制更新',false]
         ]
     }
+    action([name,opts]){
+        console.log('init',name,opts)
+    }
 }
 function Init(instance){
     return new InitCommand(instance);
