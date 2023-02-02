@@ -1,7 +1,14 @@
-'use strict';
+// test('run error command',()=>{
+//     expect(1 + 1).toBe(2)
+// })
 
-const cli = require('..');
-const assert = require('assert').strict;
+import path from 'node:path'
+const execa = require('execa');
 
-assert.strictEqual(cli(), 'Hello from cli');
-console.info("cli tests passed");
+const CLI = path.join(__dirname,'../bin/cli.js')
+const bin=()=>(...args)=> execa(CLI,args)
+
+test('run error command',async ()=>{
+    const {stderr}=await bin()('iii')
+    console.log(stderr)
+})
