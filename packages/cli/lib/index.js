@@ -1,10 +1,12 @@
 const commander=require('commander')
 const createInitCommand=require('@imooc.com/init')
+const {log}=require('@imooc.com/utils')
 
 const {program}= commander
 const pkg = require('../package.json')
 module.exports=function(args){
-    console.log(args)
+    // console.log(args)
+    log.success('version',pkg.version)
     // 注册脚手架
     program
         .name(Object.keys(pkg.bin)[0])

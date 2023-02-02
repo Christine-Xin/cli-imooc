@@ -1,7 +1,6 @@
 #! /usr/bin/env node
 
 const importLocal = require('import-local')
-const log =require('npmlog')
 const entry = require('../lib/index')
 if(importLocal(__filename)){
     log.info('cli','使用本地 cli-imooc 版本')

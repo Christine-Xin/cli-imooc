@@ -1,7 +1,7 @@
 {
-  "name": "@imooc.com/init",
+  "name": "@imooc.com/utils",
   "version": "0.0.0",
-  "description": "init command",
+  "description": "imooc utils",
   "author": "xin.zhao <xin.zhao@datacvg.com>",
   "homepage": "https://github.com/Christine-Xin/cli-imooc#readme",
   "license": "ISC",
@@ -18,13 +18,12 @@
     "url": "git+https://github.com/Christine-Xin/cli-imooc.git"
   },
   "scripts": {
-    "test": "node ./__tests__/init.test.js"
+    "test": "node ./__tests__/utils.test.js"
   },
   "bugs": {
     "url": "https://github.com/Christine-Xin/cli-imooc/issues"
   },
   "dependencies": {
-    "@imooc.com/command": "^0.0.0",
-    "@imooc.com/utils": "^0.0.0"
+    "npmlog": "^7.0.1"
   }
 }

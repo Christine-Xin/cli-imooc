@@ -1,6 +1,7 @@
 'use strict';
-
+// 命令初始化
 const Command= require('@imooc.com/command')
+const {log}=require('@imooc.com/utils')
 class InitCommand extends Command{
     get command(){
         return 'init [name]'
@@ -14,7 +15,15 @@ class InitCommand extends Command{
         ]
     }
     action([name,opts]){
-        console.log('init',name,opts)
+        log.verbose('init',name,opts)
+    }
+    // 执行命令前的钩子函数
+    preAction(){
+        console.log('pre')
+    }
+    // 执行命令后的钩子函数
+    postAction(){
+        console.log('post')
     }
 }
 function Init(instance){

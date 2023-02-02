@@ -8,6 +8,12 @@ class Command{
         this.program= instance
         const cmd= this.program.command(this.command)
         cmd.description(this.description)
+        cmd.hook('preAction',()=>{
+            this.preAction();
+        })
+        cmd.hook('postAction',()=>{
+            this.postAction()
+        })
         if(this.options?.length>0){
             this.options.forEach(option=>{
                 cmd.option(...option)
@@ -18,17 +24,29 @@ class Command{
             this.action(params)
         })
     }
+    // 命令
     get command(){
         throw new Error('command must be implements');
     }
+    // 描述
     get description(){
         throw new Error('description must be implements');
     }
+    // 选项
     get options(){
         return []
     }
+    // 输出
     get action(){
         throw new Error('action must be implements');
+    }
+    // 执行命令前的钩子函数
+    preAction(){
+
+    }
+    // 执行命令后的钩子函数
+    postAction(){
+
     }
 }
 
