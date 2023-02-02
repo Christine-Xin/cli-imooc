@@ -1,6 +1,6 @@
 #! /usr/bin/env node
 
-import importLocal from 'import-local'
+import importLocal from 'import-local' //优先加载本地脚手架版本
 import entry from '../lib/index.js'
 // import { expandGlobal } from '@imooc.com/utils'
 const __filename=global.getFileName(import.meta.url)
