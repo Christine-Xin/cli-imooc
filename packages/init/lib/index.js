@@ -16,6 +16,12 @@ class InitCommand extends Command{
     }
     action([name,opts]){
         log.verbose('init',name,opts)
+        // new Promise(resolve=>{
+        //     resolve();
+        // }).then(()=>{
+        //     throw new Error('error from promise')
+        // })
+        // throw new Error('111')
     }
     // 执行命令前的钩子函数
     preAction(){
